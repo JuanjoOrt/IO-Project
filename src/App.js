@@ -1,9 +1,10 @@
-
 import React from 'react';
-import Home from './Containers/Home/index';
 import { Provider } from 'react-redux'
-import createStorage from "./Store/configureStore.js";
 import { Route } from "wouter";
+
+import createStorage from "./Store/configureStore.js";
+import Home from './Containers/Home/index';
+import './Styles/App.css'
 
 let store = createStorage();
 

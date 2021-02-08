@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap');
+
+.layout-main {
+    height: 100vh;
+}
+
+.layout-header {
+    background: #6D72CB;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.layout-header__bar{
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout-logo{
+    cursor: pointer;
+    height: 3rem;
+}
+
+.layout-header__navbar{
+    width: 25rem;
+    height: 100%;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem 0;
+    margin:0 2rem;
+}
+
+.layout-header__navbar-item{
+    cursor: pointer;
+    color: #ececec;
+    height: 65%;
+    border-bottom: 3px solid #fff;
+    transition: .3s;
+}
+
+.layout-header__navbar-item:hover{
+    color: rgb(39, 39, 39);
+    border-bottom: 3px solid rgb(39, 39, 39);
+}
+
+.layout-header__navbar-movil{
+    width: 4rem;
+    padding: .4rem 0;
+    height: 100%;
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .layout-header__navbar {
+      display: none; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+
+    .layout-header__navbar-movil{
+        display: flex;
+    }
+  }
+
