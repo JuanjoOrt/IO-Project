@@ -19,6 +19,7 @@
 }
 
 .layout-logo{
+    cursor: pointer;
     height: 3rem;
 }
 
