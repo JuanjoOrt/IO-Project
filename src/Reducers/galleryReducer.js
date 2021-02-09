@@ -1,15 +1,15 @@
 import type from '../Constants/galleryConstants'
 
-const _initialState = () => ({
-    test: 'test',
+const initialState = () => ({
+    galleryData: [],
 });
 
-const _setData = (state, {dataAppleDaily}) => ({...state, dataAppleDaily});
+const setGalleryData = (state, galleryData) => ({...state, galleryData});
 
-export default (state = _initialState(), action) => {
+export default (state = initialState(), action) => {
     switch (action.type) {
         case type.FETCH_GALLERY:
-            return _setData(state, action);
+            return setGalleryData(state, action.galleryData);
         default:
             return state;
     }

@@ -1,15 +1,23 @@
 import React from 'react';
 import Layout from '../Layout/Layout'
+import GalleryTarget from "../../Components/GalleryTarget";
+import '../../Styles/HomeGallery.css'
 
 export default class Home extends React.Component{
 
   componentDidMount = () => {
-    console.log(this.props)
+    this.props.fetchGalleryData()
   }
 
   render = () => (
     <Layout>
-          Homeee
+          <div className="home-gallery__main">
+            <div className="home-gallery__tittle">Gallery</div> 
+            <div className="home-gallery__body">
+              {this.props.galleryData.map(item => <GalleryTarget title={item.title} id={item.id}/>)}
+            </div>
+          
+          </div>
     </Layout>
   )
 }

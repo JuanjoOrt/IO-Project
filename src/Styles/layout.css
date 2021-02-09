@@ -5,8 +5,11 @@
 }
 
 .layout-header {
+    position: fixed;
+    top: 0;
     background: #6D72CB;
     height: 5rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
