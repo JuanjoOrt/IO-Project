@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-bottom: 1px solid black;
 }
 
 .layout-header__bar{
@@ -54,6 +55,21 @@
     display: none;
 }
 
+.layout-header__sideMenu-movil{
+    width: 100%;
+    height: calc(100vh - 5rem);
+    background: #6D72CB;
+    position: absolute;
+    top: 5.05rem;
+    animation-name: example;
+    animation-duration: .5s;
+}
+
+@keyframes example {
+    from {left: 100%;}
+    to {left:0%;}
+  }
+
 @media screen and (max-width: 1000px) {
     .layout-header__navbar {
       display: none; /* The width is 100%, when the viewport is 800px or smaller */
@@ -62,5 +78,16 @@
     .layout-header__navbar-movil{
         display: flex;
     }
+
+    .layout-header__navbar-item{
+        width: 12rem;
+        height: 2.5rem;
+        font-family: 'Public Sans', sans-serif;
+        padding: .7rem 0;
+        margin:0 2rem;
+        font-size: 34px;
+    }
+
+
   }
 
