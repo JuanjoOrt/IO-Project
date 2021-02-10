@@ -13,3 +13,7 @@ export function getUsers(callback){
 export function getTodo(callback){
     executeServiceCall(paths.PATH_TODOS).then(callback);
 }
+
+export function getPosts(callback){
+    executeServiceCall(paths.PATH_POSTS).then(callback);
+}

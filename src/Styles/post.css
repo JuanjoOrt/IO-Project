@@ -1,0 +1,39 @@
+.user-post__box{
+    display: flex;
+    width: 95%;
+    margin: .7rem .7rem 1.2rem .7rem;
+    border: 1px solid #a3a3a3;
+    background: rgb(249, 249, 249);
+    border-radius: 3px;;
+}
+
+.user-post__image{
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.posts-user-logo{
+    margin-top: 1.1rem;
+    width: 3.9rem;
+    height: 3.9rem;
+}
+
+.user-post__body{
+    width: 88%;
+}
+
+.user-post__title{
+    margin-top: 1.1rem;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.user-post__text{
+    margin-bottom: 1rem;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    color: rgb(68, 68, 68);
+    margin-bottom: 3rem;
+}
