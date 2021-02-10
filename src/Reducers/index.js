@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
-import galleryReducer from '../Reducers/galleryReducer'
+import homeReducer from '../Reducers/homeReducer'
 
 
 const reducer = combineReducers({
-    galleryReducer
+    homeReducer
 });
 
 export default reducer

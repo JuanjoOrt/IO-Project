@@ -21,15 +21,8 @@ handleClick = () => {
 
   render = () => (
     <div className='layout-header'>
-        <div className='layout-header__bar'>
-        <Link href="/">
-            <img src={logo} className='layout-logo'/>
-        </Link>
-            <div className='layout-header__navbar'>
-                <div className='layout-header__navbar-item'>GALLERY</div>
-                <div className='layout-header__navbar-item'>HISTORIES</div>
-                <div className='layout-header__navbar-item'>USERS</div>
-            </div>
+        <div className='layout-header__bar'>       
+        <Link href="/"><div className="layout-logo">PRUEBA TECNICA ILERNA</div></Link>
             <div className='layout-header__navbar-movil'>
                 <Hamburger  onToggle={() => this.handleClick()}/>
             </div>

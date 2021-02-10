@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import Home from './Home.js'
-import {fetchUsersData} from '../../Actions/galleryAction'
+import User from './User'
+import { fetchUserInfo, clearUserInfo } from "../../Actions/galleryAction";
 
 
 
@@ -9,10 +9,11 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    fetchUsersData: () => dispatch(fetchUsersData())
+    fetchUserInfo: (id) => dispatch(fetchUserInfo(id)),
+    clearUserInfo: () => dispatch(clearUserInfo())
 });
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Home)
+)(User)

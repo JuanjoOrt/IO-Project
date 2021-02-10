@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap');
-
-.layout-main {
-    height: 100vh;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 .layout-header {
     position: fixed;
@@ -25,6 +22,9 @@
 .layout-logo{
     cursor: pointer;
     height: 3rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    color: white;
 }
 
 .layout-header__navbar{
@@ -90,6 +90,13 @@
         margin:0 2rem;
         font-size: 34px;
     }
+
+    .layout-logo{
+        margin: .5rem 0;
+        font-size: 30px;
+    }
+
+    
 
 
   }
