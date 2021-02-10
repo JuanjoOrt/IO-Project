@@ -9,3 +9,7 @@ export function getAlbums(callback){
 export function getUsers(callback){
     executeServiceCall(paths.PATH_USERS).then(callback);
 }
+
+export function getTodo(callback){
+    executeServiceCall(paths.PATH_TODOS).then(callback);
+}

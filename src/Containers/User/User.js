@@ -9,10 +9,12 @@ export default class GalleryTarget extends React.Component{
 
   componentDidMount = () => {
     this.props.fetchUserInfo(this.props.id)
+    this.props.fetchUserTodo(this.props.id)
   }
 
   componentWillUnmount = () => {
     this.props.clearUserInfo()
+    this.props.clearUserTodo()
   }
 
   render = () => (
@@ -30,7 +32,7 @@ export default class GalleryTarget extends React.Component{
               />
             </div>
             <div className='user-panel__todo'>
-              <UserTodo />
+              {(this.props.todoInfo) && <UserTodo todoList={this.props.todoInfo}/>}
             </div>
           </div>
           <div className='user-panel__middle'></div>
