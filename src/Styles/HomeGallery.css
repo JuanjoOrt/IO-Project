@@ -1,14 +1,14 @@
 
 
-.home-gallery__main{
+.home__main{
     width: 95%;
     margin: 1rem auto;
-    padding: 5rem 0 0 0;
+    padding: 7rem 0 0 0;
     height: calc(100vh - 6rem);
 }
 
 
-.home-gallery__tittle{
+.home__tittle{
     font-size: 34px;
     width: 8.5rem;
     padding: 0 0 1rem 0;
@@ -16,45 +16,87 @@
     font-family: 'Public Sans', sans-serif;
 }
 
-.home-gallery__body{
+.home__body{
     padding: 1rem;
     margin: 0 0 5rem 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.gallery-target__box{
+.user-target__box{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     cursor: pointer;
-    width: 90%;
+    width: 20rem;
     margin: .7rem;
-    height: 2rem;
+    height: 25rem;
     border: 1px solid #a3a3a3;
     background: rgb(245, 245, 245);
     border-radius: 3px;
     transition: .2s;
 }
 
-.gallery-target__box:hover{
+.user-target__box:hover{
     -webkit-box-shadow: 0px 0px 22px -11px rgba(0,0,0,0.52); 
     box-shadow: 0px 0px 22px -11px rgba(0,0,0,0.52);
 }
 
-.gallery-target__content{
+.user-target__content{
     font-family: 'Public Sans', sans-serif;
     display: flex;
+    flex-direction: column;
     margin: 0 1rem;
 }
 
-.gallery-target__id{
-    font-weight: bold;
+.user-target__picture{
+    width: 100%;
+    height: 16rem;
+    display: flex;
+    justify-content: center;
 }
 
-.gallery-target__title{
+.user-logo{
+    width: 12rem;
+    height: 12rem;
+    margin-top: 2rem;
+}
+
+.user-target__body{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-target__title{
     margin-left: 1rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.user-target__name{
+    font-size: 26px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.user-target__mail{
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.user-target__phone{
+    margin: 1rem 0 0 0;
+    font-size: 17px;
+    color: rgb(99, 99, 99);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.user-target__web{
+    font-size: 17px;
+    color: rgb(99, 99, 99);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.user-target__icon{
+    color: rgb(44, 44, 44);
+    margin: 0 .5rem 0 0;
 }

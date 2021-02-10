@@ -1,15 +1,46 @@
-import type from '../Constants/galleryConstants'
-import {getAlbums} from '../Services/servicesGallery/servicesGallery'
+import type from '../Constants/homeConstants'
+import {getAlbums, getUsers} from '../Services/servicesCalls/servicesCalls'
 
-export const saveAlbums = (Result) => {
+
+export const saveAlbums = (result) => ({
+    galleryData: result,
+    type: type.FETCH_GALLERY
+});
+
+export const saveUsers = (result) => ({
+    usersData: result,
+    type: type.FETCH_USERS
+});
+
+export const saveUserInfo = (result, id) => {
+    const userInfo = result.find(x => x.id === id);
     return ({
-        galleryData: Result,
-        type: type.FETCH_GALLERY
+        userInfo: userInfo,
+        type: type.FETCH_USER_INFO
     });
 }
+
+export const clearUserInfo = () => ({
+    userInfo: {},
+    type: type.FETCH_USER_INFO
+});
+
 
 export const fetchGalleryData = () => {
     return dispatch => {
         getAlbums((response) => dispatch(saveAlbums(response)));
+    };
+};
+
+export const fetchUsersData = () => {
+    return dispatch => {
+        getUsers((response) => dispatch(saveUsers(response)));
+    };
+};
+
+
+export const fetchUserInfo = (id) => {
+    return dispatch => {
+        getUsers((response) => dispatch(saveUserInfo(response, id)));
     };
 };
