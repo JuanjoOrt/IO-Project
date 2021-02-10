@@ -13,7 +13,7 @@ export const saveUsers = (result) => ({
 });
 
 export const saveUserInfo = (result, id) => {
-    const userInfo = result.find(x => x.id === id);
+    const userInfo = result.find(user => user.id === id);
     return ({
         userInfo: userInfo,
         type: type.FETCH_USER_INFO

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Home from './Home.js'
-import {fetchUsersData} from '../../Actions/galleryAction'
+import {fetchUsersData} from '../../Actions/homeAction'
 
 
 
