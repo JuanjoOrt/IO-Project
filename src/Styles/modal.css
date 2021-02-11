@@ -1,0 +1,104 @@
+.modal-post__body{
+    width: 100%;
+    height: 100%;
+}
+
+
+.modal-post__main-answer{
+    height: 9rem;
+    display: flex;
+    position: sticky;
+    top:0;
+    background-color: white;
+
+}
+
+.modal-post__main-answer_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    height: 100%;
+}
+
+.modal-post__main-answer_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-post__main-answer_title{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 20px;
+    margin-top: 2rem;
+}
+
+.modal-post__main-answer_text{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 16px;
+}
+
+
+
+.modal-post__user-logo{
+    width: 6rem;
+    height: 6rem;
+}
+
+.modal-post__comments{
+    margin-top: 3rem;
+   
+}
+
+.answer-comment__body{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+}
+
+.answer-comment__text{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+}
+
+.answer-comment__logo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 3rem;
+}
+
+.answer-comment__logoImage{
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+}
+
+.answer-comment__title{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.answer-comment__answer{
+    margin-top: .2rem;
+    overflow-wrap: break-word;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 14px;
+    color: rgb(43, 43, 43);
+}
+
+.answer-comment__mail{
+    margin-top: .2rem;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 16px;
+    color: rgb(32, 32, 32);
+
+}
