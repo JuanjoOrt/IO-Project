@@ -1,5 +1,6 @@
 .user-post__box{
     display: flex;
+    cursor: pointer;
     width: 95%;
     margin: .7rem .7rem 1.2rem .7rem;
     border: 1px solid #a3a3a3;

@@ -17,3 +17,7 @@ export function getTodo(callback){
 export function getPosts(callback){
     executeServiceCall(paths.PATH_POSTS).then(callback);
 }
+
+export function getComments(callback){
+    executeServiceCall(paths.PATH_COMMENTS).then(callback);
+}

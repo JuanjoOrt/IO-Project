@@ -6,7 +6,7 @@ export default class PostLabel extends React.Component{
 
 
   render = () => (
-    <div className='user-post__box' >
+    <div className='user-post__box' onClick={this.props.onClick}>
         <div className='user-post__image' >
             <img src={userIcon} className='posts-user-logo'/>
         </div>
