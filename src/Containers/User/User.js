@@ -6,6 +6,8 @@ import UserTarget from "../../Components/UserTarget";
 import UserTodo from "../../Components/UserTodo";
 import PostLabel from '../../Components/PostLabel';
 import ModalPost from '../../Components/Modal/ModalPost';
+import {modalStyle} from '../../utils/modalStyle.js'
+import {getCommentsById} from '../../utils/lookInArray'
 import '../../Styles/user.css'
 
 export default class GalleryTarget extends React.Component{
@@ -13,7 +15,9 @@ export default class GalleryTarget extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      modalPostActive: false
+      modalPostActive: false,
+      commentInThisPost: [],
+      postSelected: {}
     }
   }
 
@@ -24,12 +28,16 @@ export default class GalleryTarget extends React.Component{
     this.props.fetchComments()
   }
 
-  handleClickOpenPost = () => {
-    this.setState({modalPostActive: true})
+  handleClickOpenPost = (postId, post) => {
+    this.setState({modalPostActive: true,
+                   commentInThisPost: getCommentsById(this.props.comments, postId),
+                   postSelected: post})
   }
 
   handleClickClosePost = () => {
-    this.setState({modalPostActive: false})
+    this.setState({modalPostActive: false,
+                   commentInThisPost: [],
+                   postSelected: {}})
   }
 
 
@@ -63,27 +71,18 @@ export default class GalleryTarget extends React.Component{
                                                                             title={post.title} 
                                                                             content={post.body} 
                                                                             postId={post.id} 
-                                                                            onClick={() => this.handleClickOpenPost()}
+                                                                            onClick={() => this.handleClickOpenPost(post.id, {title: post.title, content: post.body})}
                                                                         />
             )}
             
             <ReactModal 
             isOpen={this.state.modalPostActive}
+            onRequestClose={this.handleClickClosePost}
             shouldCloseOnOverlayClick={true}
-            style={{
-              overlay: {
-                backgroundColor: 'rgba(150, 150, 150, 0.5)'
-              },
-              content: {
-                width: '47.3%',
-                height: 'auto',
-                top: '15%',
-                left: '21%'
-              }
-            }}
-            >
-            <ModalPost active={this.state.modalPostActive} onClick={() => this.handleClickClosePost()} title={'SUNT AUT FACERE REPELLAT PROVIDENT OCCAECATI EXCEPTURI OPTIO REPREHENDERIT'} content={'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto'}/>
+            style={modalStyle}>
+              <ModalPost active={this.state.modalPostActive} comments={this.state.commentInThisPost} title={this.state.postSelected.title} content={this.state.postSelected.content}/>
             </ReactModal>
+            <div className={'clear-space'}/>
             </div>
           <div className='user-panel__right'></div>
         </div>
