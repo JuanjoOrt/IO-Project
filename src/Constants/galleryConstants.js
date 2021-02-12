@@ -1,0 +1,4 @@
+export default {
+    FETCH_GALLERY: 'FETCH_GALLERY',
+    FETCH_PHOTOS: 'FETCH_PHOTOS'
+}

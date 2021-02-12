@@ -20,7 +20,7 @@ export default class UserTarget extends React.Component{
                 </div>
             </div>
         </Link>
-        : <div className='user-target__box' >
+        : <div className='user-target__box-specific' >
         <div className="user-target__content">
             <div className="user-target__picture"><img src={userIcon} className='user-logo'/></div>
             <div className="user-target__body">

@@ -73,31 +73,4 @@
     to {left:0%;}
   }
 
-@media screen and (max-width: 1000px) {
-    .layout-header__navbar {
-      display: none; /* The width is 100%, when the viewport is 800px or smaller */
-    }
-
-    .layout-header__navbar-movil{
-        display: flex;
-    }
-
-    .layout-header__navbar-item{
-        width: 12rem;
-        height: 2.5rem;
-        font-family: 'Public Sans', sans-serif;
-        padding: .7rem 0;
-        margin:0 2rem;
-        font-size: 34px;
-    }
-
-    .layout-logo{
-        margin: .5rem 0;
-        font-size: 30px;
-    }
-
-    
-
-
-  }
 

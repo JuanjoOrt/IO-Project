@@ -21,3 +21,7 @@ export function getPosts(callback){
 export function getComments(callback){
     executeServiceCall(paths.PATH_COMMENTS).then(callback);
 }
+
+export function getPhotos(callback){
+    executeServiceCall(paths.PATH_PHOTOS).then(callback);
+}
