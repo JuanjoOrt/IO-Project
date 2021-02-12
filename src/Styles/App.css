@@ -7,3 +7,10 @@ body {
     height: 1rem;
     background-color: white;
 }
+
+.clear-space-gray{
+    width: 95%;
+    height: 1rem;
+    background-color: #f9f9f9;
+    
+}

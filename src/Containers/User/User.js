@@ -5,9 +5,11 @@ import ReactModal from 'react-modal';
 import UserTarget from "../../Components/UserTarget";
 import UserTodo from "../../Components/UserTodo";
 import PostLabel from '../../Components/PostLabel';
+import UserGallery from '../../Components/UserGallery'
 import ModalPost from '../../Components/Modal/ModalPost';
-import {modalStyle} from '../../utils/modalStyle.js'
-import {getCommentsById} from '../../utils/lookInArray'
+import ModalPhoto from '../../Components/Modal/ModalPhoto'
+import {modalStyle, modalPhotoStyle} from '../../utils/modalStyle.js'
+import {getCommentsById, getSinglePhotoById} from '../../utils/lookInArray'
 import '../../Styles/user.css'
 
 export default class GalleryTarget extends React.Component{
@@ -16,8 +18,11 @@ export default class GalleryTarget extends React.Component{
     super(props)
     this.state = {
       modalPostActive: false,
+      modalPhotoActive: false,
       commentInThisPost: [],
-      postSelected: {}
+      photosSelected: [],
+      postSelected: {},
+      photoSelected: {}
     }
   }
 
@@ -25,7 +30,9 @@ export default class GalleryTarget extends React.Component{
     this.props.fetchUserInfo(this.props.id)
     this.props.fetchUserTodo(this.props.id)
     this.props.fetchUserPosts(this.props.id)
+    this.props.fetchUserAlbums(this.props.id)
     this.props.fetchComments()
+    this.props.fetchAllPhotos()
   }
 
   handleClickOpenPost = (postId, post) => {
@@ -38,6 +45,16 @@ export default class GalleryTarget extends React.Component{
     this.setState({modalPostActive: false,
                    commentInThisPost: [],
                    postSelected: {}})
+  }
+
+  handleClickOpenPhoto = (id) => {
+    this.setState({modalPhotoActive: true,
+                   photoSelected: getSinglePhotoById(this.props.allPhotos, id)})
+  }
+
+  handleClickClosePhoto = () => {
+    this.setState({modalPhotoActive: false,
+                   photoSelected: {}})
   }
 
 
@@ -66,13 +83,14 @@ export default class GalleryTarget extends React.Component{
             </div>
           </div>
             <div className='user-panel__middle'>
-            {(this.props.userPosts) && this.props.userPosts.map(post => <PostLabel 
-                                                                            key={post.id} 
-                                                                            title={post.title} 
-                                                                            content={post.body} 
-                                                                            postId={post.id} 
-                                                                            onClick={() => this.handleClickOpenPost(post.id, {title: post.title, content: post.body})}
-                                                                        />
+            {(this.props.userPosts) && this.props.userPosts.map(post => 
+                <PostLabel 
+                    key={post.id} 
+                    title={post.title} 
+                    content={post.body} 
+                    postId={post.id} 
+                    onClick={() => this.handleClickOpenPost(post.id, {title: post.title, content: post.body})}
+                />
             )}
             
             <ReactModal 
@@ -80,11 +98,27 @@ export default class GalleryTarget extends React.Component{
             onRequestClose={this.handleClickClosePost}
             shouldCloseOnOverlayClick={true}
             style={modalStyle}>
-              <ModalPost active={this.state.modalPostActive} comments={this.state.commentInThisPost} title={this.state.postSelected.title} content={this.state.postSelected.content}/>
+              <ModalPost active={this.state.modalPostActive} 
+                comments={this.state.commentInThisPost} 
+                title={this.state.postSelected.title} 
+                content={this.state.postSelected.content}/>
             </ReactModal>
             <div className={'clear-space'}/>
             </div>
-          <div className='user-panel__right'></div>
+          <div className='user-panel__right'>
+            <UserGallery 
+              allPhotos={this.props.allPhotos} 
+              list={this.props.galleryAlbums} 
+              onClick={(id) => this.handleClickOpenPhoto(id)} 
+            />
+            <ReactModal 
+            isOpen={this.state.modalPhotoActive}
+            onRequestClose={this.handleClickClosePhoto}
+            shouldCloseOnOverlayClick={true}
+            style={modalPhotoStyle}>
+              <ModalPhoto photoSelected={this.state.photoSelected}/>
+            </ReactModal>
+          </div>
         </div>
     </Layout>
   )

@@ -60,10 +60,10 @@
 }
 
 .answer-comment__text{
-    text-align: right;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    width: 25rem;
+    width: 30rem;
     background: #f0f2f5;
     border-radius: 10px;
     padding: .5rem;
@@ -98,9 +98,30 @@
 }
 
 .answer-comment__mail{
+    text-align: right;
     margin-top: .2rem;
     font-family: 'Public Sans', sans-serif;
     font-size: 13px;
     color: rgb(111 111 111);
 
+}
+
+.modal-photo__box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-photo__title{
+    position: absolute;
+    padding-top: .4rem;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 19px;
+    bottom: 0;
+    background-color: rgba(56, 56, 56, 0.651);
+    color: white;
+    width: 100%;
+    text-align: center;
+    min-height: 2rem;
 }

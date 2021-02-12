@@ -16,7 +16,7 @@ export default class ModalPost extends React.Component{
           </div>
         </div>
         <div className='modal-post__comments'>
-          {this.props.comments.map(commentItem => <AnswerComment title={commentItem.name} message={commentItem.body} mail={commentItem.email}/>)}
+          {this.props.comments.map(commentItem => <AnswerComment key={commentItem.id} title={commentItem.name} message={commentItem.body} mail={commentItem.email}/>)}
         </div>
         <div className={'clear-space'}/>
     </div>
