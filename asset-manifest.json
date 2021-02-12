@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/JuanjoOrt/IO-Project/static/css/main.519a217a.chunk.css",
+    "main.js": "/JuanjoOrt/IO-Project/static/js/main.cc68dedf.chunk.js",
+    "main.js.map": "/JuanjoOrt/IO-Project/static/js/main.cc68dedf.chunk.js.map",
+    "runtime-main.js": "/JuanjoOrt/IO-Project/static/js/runtime-main.0194ddb5.js",
+    "runtime-main.js.map": "/JuanjoOrt/IO-Project/static/js/runtime-main.0194ddb5.js.map",
+    "static/js/2.73afe1fb.chunk.js": "/JuanjoOrt/IO-Project/static/js/2.73afe1fb.chunk.js",
+    "static/js/2.73afe1fb.chunk.js.map": "/JuanjoOrt/IO-Project/static/js/2.73afe1fb.chunk.js.map",
+    "index.html": "/JuanjoOrt/IO-Project/index.html",
+    "static/css/main.519a217a.chunk.css.map": "/JuanjoOrt/IO-Project/static/css/main.519a217a.chunk.css.map",
+    "static/js/2.73afe1fb.chunk.js.LICENSE.txt": "/JuanjoOrt/IO-Project/static/js/2.73afe1fb.chunk.js.LICENSE.txt",
+    "static/media/user_icon.22c31152.png": "/JuanjoOrt/IO-Project/static/media/user_icon.22c31152.png",
+    "static/media/user_icon_2.c543c8fb.png": "/JuanjoOrt/IO-Project/static/media/user_icon_2.c543c8fb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0194ddb5.js",
+    "static/js/2.73afe1fb.chunk.js",
+    "static/css/main.519a217a.chunk.css",
+    "static/js/main.cc68dedf.chunk.js"
+  ]
+}
