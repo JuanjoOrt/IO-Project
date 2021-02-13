@@ -13,7 +13,9 @@ export default class UserGallery extends React.Component{
 
   componentDidUpdate(prevProps){
     if (prevProps.allPhotos !== this.props.allPhotos){
-      this.setState({photos: getPhotosById(this.props.allPhotos, parseInt(this.props.list[0].id))})
+      if(this.props.list){
+        this.setState({photos: getPhotosById(this.props.allPhotos, parseInt(this.props.list[0].id))})
+      }
     }
   }
 

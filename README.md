@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Prueba técnica para ILERNA ONLINE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenidos,
+Esto es un proyecto realizado como prueba técnica para ILERNA ONLINE, el objetivo que me he propuesto con la api publica que me han ofrecido es la realización de una front page de una posible red social.
+La API constaba de lo siguientes End-Points:
 
-## Available Scripts
+ - [Users ](https://jsonplaceholder.typicode.com/users) -> Usuarios que participan en la aplicación.
+ - [To-Do](https://jsonplaceholder.typicode.com/todos) -> Lista de tareas pendientes/completadas de cada usuario.
+ - [Posts](https://jsonplaceholder.typicode.com/posts) -> Historias que han escritos los usuarios.
+ - [Comments](https://jsonplaceholder.typicode.com/comments) -> Comentarios a las historias escritas por otros usuarios.
+ - [Albums](https://jsonplaceholder.typicode.com/albums) -> Álbumes de fotografías asignados a cada usuario.
+ - [Photos](https://jsonplaceholder.typicode.com/photos) -> Fotografías asignadas a cada Álbum.
 
-In the project directory, you can run:
+## Ejecución y Live Demo
 
-### `npm start`
+Para ejecutar el proyecto hay que seguir los siguientes pasos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ - `npm install`
+ - `npm run start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Si quieres ver la aplicación sin descargar e instalar el proyecto -> Live Demo
 
-### `npm test`
+## Librerías utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - [React](https://github.com/facebook/react)/[Redux](https://github.com/reduxjs/redux): Ambas funcionan muy bien de la mano y facilitan mucho la gestión de las props.
+ - [Wouter](https://github.com/molefrog/wouter): Aunque la librería más conocida para realizar routing en React es [React-Router](https://github.com/ReactTraining/react-router), personalmente para este tipo de proyectos más pequeños me gusta utilizar Wouter, comenzando por que te da las principales herramientas para hacer un routing completo, es una librería es pequeñita (1kb) y amigable.
+ - [Axios](https://github.com/axios/axios): Podría haber realizado las peticiones a la Api directamente utilizando el fetch nativo de JavaScript, pero ante la posibilidad de ser ejecutada esta web en IE he preferido tirar por esta librería.
+ - [React-Modal](https://github.com/reactjs/react-modal): Librería que facilita mucho la inserción de modales.
+ - [React-Icons](https://react-icons.github.io/react-icons/): Librería para insertar iconos.
