@@ -15,7 +15,7 @@
 
 .user-panel__middle{
     width: 62rem;
-    height: 100%;
+    height: auto;
 }
 
 .user-panel__right{
@@ -30,4 +30,16 @@
 
 .user-panel__todo{
     width: 100%;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .user__main{
+        flex-direction: column;
+    }
+
+    .user-panel__middle{
+        width: auto;
+        height: auto;
+    }
 }
