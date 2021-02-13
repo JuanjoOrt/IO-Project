@@ -11,19 +11,36 @@ La API constaba de lo siguientes End-Points:
  - [Albums](https://jsonplaceholder.typicode.com/albums) -> Álbumes de fotografías asignados a cada usuario.
  - [Photos](https://jsonplaceholder.typicode.com/photos) -> Fotografías asignadas a cada Álbum.
 
-## Ejecución y Live Demo
+En que parte de la aplicación está cada End-Point:
+![](https://i.imgur.com/xF5w3cM.png)
+
+## Ejecución e instalación de la aplicación
 
 Para ejecutar el proyecto hay que seguir los siguientes pasos:
 
  - `npm install`
  - `npm run start`
 
-Si quieres ver la aplicación sin descargar e instalar el proyecto -> Live Demo
-
 ## Librerías utilizadas
 
  - [React](https://github.com/facebook/react)/[Redux](https://github.com/reduxjs/redux): Ambas funcionan muy bien de la mano y facilitan mucho la gestión de las props.
  - [Wouter](https://github.com/molefrog/wouter): Aunque la librería más conocida para realizar routing en React es [React-Router](https://github.com/ReactTraining/react-router), personalmente para este tipo de proyectos más pequeños me gusta utilizar Wouter, comenzando por que te da las principales herramientas para hacer un routing completo, es una librería es pequeñita (1kb) y amigable.
- - [Axios](https://github.com/axios/axios): Podría haber realizado las peticiones a la Api directamente utilizando el fetch nativo de JavaScript, pero ante la posibilidad de ser ejecutada esta web en IE he preferido tirar por esta librería.
+ - [Axios](https://github.com/axios/axios): Podría haber realizado las peticiones a la Api directamente utilizando el fetch nativo de JavaScript, pero ante la posibilidad de ser ejecutada esta web en IE he preferido optar por esta librería.
  - [React-Modal](https://github.com/reactjs/react-modal): Librería que facilita mucho la inserción de modales.
  - [React-Icons](https://react-icons.github.io/react-icons/): Librería para insertar iconos.
+
+## Git WorkFlow
+El workflow que he seguido es el que haría en cualquier proyecto en el que suelo trabajar, siempre tengo una rama Main/Develop de la que salen el resto de ramas, cuando utilizamos algún tipo de gestor de tareas cada rama tiene siempre la id de la tarea que se encarga (feature/#0000) en este caso como no lo uso cada rama tiene un nombre simbólico de lo que tiene que hacer.
+
+![enter image description here](https://i.imgur.com/chfhpCr.png)
+
+## Desde la idea hasta el producto
+
+Como en cada proyecto en el que trabajo pienso que es completamente necesario seguir una serie de fases para realizar un trabajo de calidad y tener las cosas claras desde el inicio, comenzando por un estudio de lo que se quiere llegar a hacer ( en este caso una especia de red social con los End-Points ofrecidos), pasando por la tecnología que es más optima para la aplicación (React/Redux), un proceso de diseño para ver como finalmente va a quedar para tener claras las pantallas desde el inicio y finalmente un tipo de arquitectura que nos convenga (Flux).
+![enter image description here](https://i.imgur.com/BGBKVZw.png)
+
+## Utilizando los componentes
+
+Una de las características más importantes que nos ofrecen estas ultimas tecnologías es la capacidad de crear componentes y re-utilizarlos a medida que nos sea necesario, en lo personal me gusta mucho esta posibilidad e intento realizarla lo máximo posible, dejo un ejemplo de los componentes más importantes y como está estructurado
+
+![](https://i.imgur.com/ECU46OF.png)
