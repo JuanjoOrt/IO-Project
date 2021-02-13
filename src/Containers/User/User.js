@@ -97,6 +97,7 @@ export default class GalleryTarget extends React.Component{
             isOpen={this.state.modalPostActive}
             onRequestClose={this.handleClickClosePost}
             shouldCloseOnOverlayClick={true}
+            ariaHideApp={false}
             style={modalStyle}>
               <ModalPost active={this.state.modalPostActive} 
                 comments={this.state.commentInThisPost} 
@@ -115,6 +116,7 @@ export default class GalleryTarget extends React.Component{
             isOpen={this.state.modalPhotoActive}
             onRequestClose={this.handleClickClosePhoto}
             shouldCloseOnOverlayClick={true}
+            ariaHideApp={false}
             style={modalPhotoStyle}>
               <ModalPhoto photoSelected={this.state.photoSelected}/>
             </ReactModal>
