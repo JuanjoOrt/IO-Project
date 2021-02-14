@@ -1,8 +1,11 @@
+
 # Prueba técnica para ILERNA ONLINE
 
-Bienvenidos,
-Esto es un proyecto realizado como prueba técnica para ILERNA ONLINE, el objetivo que me he propuesto con la api publica que me han ofrecido es la realización de una front page de una posible red social.
-La API constaba de lo siguientes End-Points:
+Bienvenidos.
+
+Esto es un proyecto realizado como prueba técnica para ILERNA ONLINE cuyo objetivo es la realización de una front page para una red social con los End-Points ofrecidos.
+
+La API consta de lo siguientes:
 
  - [Users ](https://jsonplaceholder.typicode.com/users) -> Usuarios que participan en la aplicación.
  - [To-Do](https://jsonplaceholder.typicode.com/todos) -> Lista de tareas pendientes/completadas de cada usuario.
@@ -12,6 +15,7 @@ La API constaba de lo siguientes End-Points:
  - [Photos](https://jsonplaceholder.typicode.com/photos) -> Fotografías asignadas a cada Álbum.
 
 En que parte de la aplicación está cada End-Point:
+
 ![](https://i.imgur.com/xF5w3cM.png)
 
 ## Ejecución e instalación de la aplicación
@@ -23,8 +27,8 @@ Para ejecutar el proyecto hay que seguir los siguientes pasos:
 
 ## Librerías utilizadas
 
- - [React](https://github.com/facebook/react)/[Redux](https://github.com/reduxjs/redux): Ambas funcionan muy bien de la mano y facilitan mucho la gestión de las props.
- - [Wouter](https://github.com/molefrog/wouter): Aunque la librería más conocida para realizar routing en React es [React-Router](https://github.com/ReactTraining/react-router), personalmente para este tipo de proyectos más pequeños me gusta utilizar Wouter, comenzando por que te da las principales herramientas para hacer un routing completo, es una librería es pequeñita (1kb) y amigable.
+ - [React](https://github.com/facebook/react)/[Redux](https://github.com/reduxjs/redux): Ambas se complementan perfectamente y facilitan mucho la gestión de las props.
+ - [Wouter](https://github.com/molefrog/wouter): Aunque la librería más conocida para realizar routing en React es [React-Router](https://github.com/ReactTraining/react-router), personalmente para este tipo de proyectos más pequeños me gusta utilizar Wouter, comenzando por que te ofrece las principales herramientas para hacer un routing completo, es una librería pequeñita (1kb) y amigable.
  - [Axios](https://github.com/axios/axios): Podría haber realizado las peticiones a la Api directamente utilizando el fetch nativo de JavaScript, pero ante la posibilidad de ser ejecutada esta web en IE he preferido optar por esta librería.
  - [React-Modal](https://github.com/reactjs/react-modal): Librería que facilita mucho la inserción de modales.
  - [React-Icons](https://react-icons.github.io/react-icons/): Librería para insertar iconos.
@@ -36,11 +40,13 @@ El workflow que he seguido es el que haría en cualquier proyecto en el que suel
 
 ## Desde la idea hasta el producto
 
-Como en cada proyecto en el que trabajo pienso que es completamente necesario seguir una serie de fases para realizar un trabajo de calidad y tener las cosas claras desde el inicio, comenzando por un estudio de lo que se quiere llegar a hacer ( en este caso una especia de red social con los End-Points ofrecidos), pasando por la tecnología que es más optima para la aplicación (React/Redux), un proceso de diseño para ver como finalmente va a quedar para tener claras las pantallas desde el inicio y finalmente un tipo de arquitectura que nos convenga (Flux).
+En cada proyecto en el que trabajo, pienso que es completamente necesario seguir una serie de fases para realizar un trabajo de calidad y tener las cosas claras desde el inicio. Comenzando por un estudio de lo que se quiere llegar a hacer ( una red social con los End-Points ofrecidos), siguiendo por la tecnología que es más optima para la aplicación (React/Redux), creando un proceso de diseño que refleje el resultado final de las pantallas y por último un tipo de arquitectura que nos convenga (Flux).
+
 ![enter image description here](https://i.imgur.com/BGBKVZw.png)
 
 ## Utilizando los componentes
 
-Una de las características más importantes que nos ofrecen estas ultimas tecnologías es la capacidad de crear componentes y re-utilizarlos a medida que nos sea necesario, en lo personal me gusta mucho esta posibilidad e intento realizarla lo máximo posible, dejo un ejemplo de los componentes más importantes y como está estructurado
+Una de las características más importantes que nos ofrecen estas últimas tecnologías es la capacidad de crear componentes y re-utilizarlos a medida que nos sea necesario, en lo personal me gusta mucho esta posibilidad e intento realizarla lo máximo posible.
+Dejo un ejemplo de los componentes más importantes y como está estructurado:
 
 ![](https://i.imgur.com/ECU46OF.png)
